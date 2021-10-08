@@ -64,4 +64,4 @@ jobs:
         with:
           app-name: 'choropleth'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_05EC63AD450E4287BFCE555BAADC1AA0 }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
