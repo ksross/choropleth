@@ -32,7 +32,9 @@ jobs:
           source venv/bin/activate
       
       - name: Install dependencies
-        run: pipenv install
+        run: |
+          pipenv install
+          pipenv lock -r > requirements.txt
         
       # Tests will go here
       
