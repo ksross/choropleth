@@ -2,6 +2,7 @@
 /choropleth-api/.env
 /choropleth-api/.venv
 /choropleth-api/bootstrap.sh
+/choropleth-api/requirements.txt
 
 /choropleth-ui/node_modules
 /choropleth-ui/build
