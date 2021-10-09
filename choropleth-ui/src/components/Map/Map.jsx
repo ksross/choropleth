@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import './Map.css';
 import * as d3 from 'd3'
 import * as d3GeoProjection from "d3-geo-projection"
 import countryShapes from "./countries.json"
@@ -28,23 +29,21 @@ const Map = () => {
     const bounds = pathGenerator.bounds(sphere)
 
     return (
-        <div
-            style={{
-                overflow: "hidden",
-                width: "100%",
-            }}
-        >
-        
-            <svg width={width} height={bounds[1][1]}>
-                <path d={pathGenerator(sphere)} fill="none" />
-                <g>
-                    {countryShapes.features.map((shape) => {
-                        return (
-                            <Path key={shape.properties.subunit} pathGenerator={pathGenerator} shape={shape} stroke="#5c6576"></Path>
-                        )
-                    })}
-                </g>
-            </svg>
+        <div className="map-outer">
+            <div className="map-inner">
+                <div className="map">
+                    <svg width={width} height={bounds[1][1]}>
+                        <path d={pathGenerator(sphere)} fill="none" />
+                        <g>
+                            {countryShapes.features.map((shape) => {
+                                return (
+                                    <Path key={shape.properties.subunit} pathGenerator={pathGenerator} shape={shape} stroke="#5c6576"></Path>
+                                )
+                            })}
+                        </g>
+                    </svg>
+                </div>
+            </div>
         </div>
     )
 }

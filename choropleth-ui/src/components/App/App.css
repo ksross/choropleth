@@ -1,12 +1,18 @@
+html {
+  height: 100%;
+}
+
 body {
   background-color: #282c34;
+  height: 100%;
   overflow-y: hidden;
 }
 
-.App {
-  text-align: center;
+#root {
+  height: 100%;
 }
 
-path {
-  opacity: .8;
+.app {
+  height: 100%;
+  text-align: center;
 }
