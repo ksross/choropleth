@@ -66,6 +66,7 @@ jobs:
             az storage blob upload-batch --account-name choropleth --auth-mode key -d '$web' -s .
 
       - name: logout
+        uses: azure/CLI@v1
         with:
           azcliversion: 2.0.72
           inlineScript: |
