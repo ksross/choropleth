@@ -41,8 +41,8 @@ jobs:
         with:
           name: python-app
           path: |
-            . 
-            !venv/
+            choropleth-api
+            !choropleth-api/venv/
           
   deploy:
     runs-on: ubuntu-latest
