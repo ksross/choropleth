@@ -6,6 +6,7 @@ on:
       - main
     paths:
       'choropleth-api/**'
+  workflow_dispatch:
 
 defaults:
   run:

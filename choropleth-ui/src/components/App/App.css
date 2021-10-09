@@ -1,0 +1,12 @@
+body {
+  background-color: #282c34;
+  overflow-y: hidden;
+}
+
+.App {
+  text-align: center;
+}
+
+path {
+  opacity: .8;
+}
