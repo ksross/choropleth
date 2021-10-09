@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useEffect } from 'react';
-import axios from 'axios'
+//import axios from 'axios'
 import Map from '../Map/Map';
 
 function App() {
