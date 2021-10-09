@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      'choropleth-ui/**'
       
 defaults:
   run:
@@ -62,15 +64,11 @@ jobs:
           azcliversion: 2.0.72
           inlineScript: |
             az storage blob upload-batch --account-name choropleth --auth-mode key -d '$web' -s .
-      
-      - name: Purge CDN endpoint
-        uses: azure/CLI@v1
+
+      - name: logout
         with:
           azcliversion: 2.0.72
           inlineScript: |
-           az cdn endpoint purge --content-paths  "/*" --profile-name "CDN_PROFILE_NAME" --name "CDN_ENDPOINT" --resource-group "RESOURCE_GROUP"
-
-      - name: logout
-        run: |
             az logout
-        if: always()
+            az cache purge
+            az account clear
